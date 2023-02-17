@@ -1,0 +1,1 @@
+/Users/jslit/IdeaProjects/nucleotrove/build/classes/kotlin/main/AminoAcid.class:/Users/jslit/IdeaProjects/nucleotrove/build/classes/kotlin/main/MainKt.class
