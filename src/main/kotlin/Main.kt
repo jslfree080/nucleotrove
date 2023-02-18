@@ -1,4 +1,6 @@
-// this enum class represents the 20 common amino acids found in proteins
+/*
+this enum class represents the 20 common amino acids found in proteins
+*/
 enum class AminoAcid {
     A, R, N, D, C, Q, E, G, H, I, L, K, M, F, P, S, T, W, Y, V
 }
