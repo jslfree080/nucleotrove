@@ -2,8 +2,9 @@ package com.jslfree080.nucleotrove
 
 fun main() {
     // initialization
-    val text = "This is an awesome tutorial to get to know SeqAn!"
+    val text = "This is an awesome tutorial to get to know nucleotrove!"
     val pattern = "tutorial"
+    /* create an IntArray of size (text.length - pattern.length + 1) */
     val score = IntArray(text.length - pattern.length + 1)
 
     // computation of the similarities
