@@ -1,3 +1,5 @@
+package com.jslfree080.nucleotrove
+
 /*
 this enum class represents the 20 common amino acids found in proteins
 */

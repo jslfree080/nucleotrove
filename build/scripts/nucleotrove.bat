@@ -67,11 +67,11 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\nucleotrove-1.0-SNAPSHOT.jar;%APP_HOME%\lib\kotlin-stdlib-jdk8-1.8.10.jar;%APP_HOME%\lib\kotlin-stdlib-jdk7-1.8.10.jar;%APP_HOME%\lib\kotlin-stdlib-1.8.10.jar;%APP_HOME%\lib\kotlin-stdlib-common-1.8.10.jar;%APP_HOME%\lib\annotations-13.0.jar
+set CLASSPATH=%APP_HOME%\lib\nucleotrove.jar;%APP_HOME%\lib\kotlin-stdlib-jdk8-1.8.10.jar;%APP_HOME%\lib\kotlin-stdlib-jdk7-1.8.10.jar;%APP_HOME%\lib\kotlin-stdlib-1.8.10.jar;%APP_HOME%\lib\kotlin-stdlib-common-1.8.10.jar;%APP_HOME%\lib\annotations-13.0.jar
 
 
 @rem Execute nucleotrove
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %NUCLEOTROVE_OPTS%  -classpath "%CLASSPATH%" BackgroundAndMotivationKt %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %NUCLEOTROVE_OPTS%  -classpath "%CLASSPATH%" AFirstExampleKt %*
 
 :end
 @rem End local scope for the variables with windows NT shell

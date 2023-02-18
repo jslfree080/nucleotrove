@@ -5,8 +5,8 @@ plugins {
     application
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "com.jslfree080"
+version = "0.0.0"
 
 repositories {
     mavenCentral()
@@ -21,9 +21,31 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "11" // version of jvmTarget
 }
 
 application {
-    mainClass.set("BackgroundAndMotivationKt")
+    mainClass.set("AFirstExampleKt")
 }
+
+tasks.withType<Jar> {
+    // Otherwise you'll get a "No main manifest attribute" error
+    manifest {
+        attributes["Main-Class"] = "com.jslfree080.nucleotrove.AFirstExampleKt"
+        archiveFileName.set("nucleotrove.jar")
+    }
+
+    // To avoid the duplicate handling strategy error
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    // To add all of the dependencies
+    from(sourceSets.main.get().output)
+
+    dependsOn(configurations.runtimeClasspath)
+    from({
+        configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) }
+    })
+}
+
+// ./gradlew build |or| ./gradlew clean build (Delete all the previous version of the dependencies)
+// java -jar build/libs/nucleotrove.jar
