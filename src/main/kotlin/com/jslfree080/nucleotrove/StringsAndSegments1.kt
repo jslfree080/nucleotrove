@@ -15,7 +15,7 @@ fun getRevCompl(nucleotide: Char): Char {
 
 fun main() {
     val genome = "TATATACGCGCGAGTCGT"
-    println(genome)
-    println(genome.reversed().map { getRevCompl(it) }.joinToString(separator = ""))
+    println(genome) // TATATACGCGCGAGTCGT
+    println(genome.reversed().map { getRevCompl(it) }.joinToString(separator = "")) // ACGACTCGCGCGTATATA
     exitProcess(0)
 }
