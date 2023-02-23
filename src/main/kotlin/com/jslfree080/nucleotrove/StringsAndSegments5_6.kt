@@ -4,9 +4,8 @@ fun main() {
     val genome = "ANTGGTTNCAACNGTAANTGCTGANNNACATGTNCGCGTGTA".toCharArray()
 
     var it = 0
-    val itEnd = genome.size
 
-    while (it != itEnd) {
+    while (it != genome.size) {
         if (genome[it] == 'N')
             genome[it] = 'A'
         it++
