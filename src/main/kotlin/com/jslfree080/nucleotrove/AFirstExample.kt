@@ -22,10 +22,8 @@ fun computeScore(text: String, pattern: String): IntArray {
     return score
 }
 
-fun maxOnly(score: IntArray) {
-    println(
-        score.indexOf(score.max())
-    )
+fun maxOnly(score: IntArray): Int {
+    return score.indexOf(score.max())
 }
 
 fun greaterZero(score: IntArray) {
@@ -47,6 +45,6 @@ fun main() {
     println(text) // This is an awesome tutorial to get to know nucleotrove!
     println(pattern) // tutorial
     println(score.joinToString(separator = " ")) // 1 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 8 0 1 0 0 0 0 2 0 1 0 0 1 0 3 0 1 0 1 0 1 0 0 0 1 0 1 1 1
-    maxOnly(score) // 19
+    println(maxOnly(score)) // 19
     greaterZero(score) // (2; 1) (5; 1) (12; 1) (17; 1) (19; 8) (21; 1) (26; 2) (28; 1) (31; 1) (33; 3) (35; 1) (37; 1) (39; 1) (43; 1) (45; 1) (46; 1) (47; 1)
 }

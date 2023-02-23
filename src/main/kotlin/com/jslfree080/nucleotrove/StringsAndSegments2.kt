@@ -33,34 +33,35 @@ fun main() {
 
     // 1. Assume we have mapped the 4 reads to chr1 (and chr2) and now have the mapping start positions (no gaps).
     // Store the start position in a List alignPosList: 7, 100, 172, 272
-    val alignPosList = listOf(7, 100, 172, 272)
+    // [7, 100, 172, 272]
+    val alignPosList = List(readList.size) { index -> maxOnly(computeScore(chr1And2, readList[index])) }
 
     // 2. Bisulfite conversion
-    // Assume chr1 is being bisulfate treated: Copy chr1 to a new genome bsChr1 and exchange every 'C' with a 'T'
-    val bsChr1 = StringBuilder()
-    for (c in chr1And2) {
-        bsChr1.append(if (c == 'C') 'T' else c)
+    // Assume chr1 is being bisulfate treated: Copy chr1 to a new genome bsChr1And2 and exchange every 'C' with a 'T'
+    val bsChr1And2 = StringBuilder()
+    for (base in chr1And2) {
+        bsChr1And2.append(if (base == 'C') 'T' else base)
     }
 
-    // 3. Print alignments of the reads with chr1 (or bsChr1) sequence using the function printAlign
+    // 3. Print alignments of the reads with chr1 (or bsChr1And2) sequence using the function printAlign
     // and the positions in alignPosList.
-    // To do that, you have to create a copy of the fragment in chr1 (bsChr1) that is aligned to the read.
+    // To do that, you have to create a copy of the fragment in chr1 (bsChr1And2) that is aligned to the read.
 
     println("\n Print alignment: ")
-    for (i in readList.indices) {
+    readList.indices.forEach {
         // Begin position beginPosition of a given alignment between the read and the genome
-        val beginPosition = alignPosList[i]
+        val beginPosition = alignPosList[it]
 
         // Genome fragment
         val genomeFragment = StringBuilder()
 
         // We have to create a copy of the corresponding fragment of the genome, where the read aligns to
-        for (j in readList[i].indices) {
+        for (j in readList[it].indices) {
             genomeFragment.append(chr1And2[beginPosition + j])
         }
 
         // Call of our function to print the simple alignment
-        printAlign(genomeFragment, readList[i])
+        printAlign(genomeFragment, readList[it])
     }
 /*
  Read list:
