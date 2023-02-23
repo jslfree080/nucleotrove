@@ -201,7 +201,7 @@ fi
 
 set -- \
         -classpath "$CLASSPATH" \
-        StringsAndSegments2Kt \
+        StringsAndSegments9Kt \
         "$@"
 
 # Stop when "xargs" is not available.

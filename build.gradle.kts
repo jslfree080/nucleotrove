@@ -25,13 +25,13 @@ tasks.withType<KotlinCompile> {
 }
 
 application {
-    mainClass.set("StringsAndSegments2Kt")
+    mainClass.set("StringsAndSegments9Kt")
 }
 
 tasks.withType<Jar> {
     // Otherwise you'll get a "No main manifest attribute" error
     manifest {
-        attributes["Main-Class"] = "com.jslfree080.nucleotrove.StringsAndSegments2Kt"
+        attributes["Main-Class"] = "com.jslfree080.nucleotrove.StringsAndSegments9Kt"
         archiveFileName.set("nucleotrove.jar")
     }
 

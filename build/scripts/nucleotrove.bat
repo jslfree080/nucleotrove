@@ -71,7 +71,7 @@ set CLASSPATH=%APP_HOME%\lib\nucleotrove.jar;%APP_HOME%\lib\kotlin-stdlib-jdk8-1
 
 
 @rem Execute nucleotrove
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %NUCLEOTROVE_OPTS%  -classpath "%CLASSPATH%" StringsAndSegments2Kt %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %NUCLEOTROVE_OPTS%  -classpath "%CLASSPATH%" StringsAndSegments9Kt %*
 
 :end
 @rem End local scope for the variables with windows NT shell
