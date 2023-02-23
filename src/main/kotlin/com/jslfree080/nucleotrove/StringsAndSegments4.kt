@@ -40,7 +40,6 @@ fun main() {
         // Compare the String with the given reference string
         // The result of the comparison is stored in comp
         val comp = lexical(nucleotidesList[i], ref)
-        println(comp)
         // The function isLess checks only the stored result
         // without comparing the sequences again
         if (isLess(comp))
