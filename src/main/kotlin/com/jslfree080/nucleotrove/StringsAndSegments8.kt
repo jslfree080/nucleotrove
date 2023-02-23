@@ -22,3 +22,8 @@ fun main() {
     // Call of our function to print the simple alignment
     printAlign(genomeFragment, read)
 }
+/*
+Alignment
+  genome : TGGTTTCA
+  read   : TGGTNTCA
+*/
