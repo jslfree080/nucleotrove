@@ -13,6 +13,6 @@ fun main() {
             greater.add(it)
         }
     }
-    println("Lesser nucleotides: ${lesser.joinToString(separator = "")}") // Lesser nucleotides: [A, C, A, C]
-    println("Greater nucleotides: ${greater.joinToString(separator = "")}") // Greater nucleotides: [T, T, N, N, N, T]
+    println("Lesser nucleotides: ${lesser.joinToString(separator = "")}") // Lesser nucleotides: ACAC
+    println("Greater nucleotides: ${greater.joinToString(separator = "")}") // Greater nucleotides: TTNNNT
 }
